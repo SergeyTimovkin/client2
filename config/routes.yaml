@@ -1,0 +1,11 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+authentication_token:
+    path: /authentication_token
+    methods: ['POST']
+
+user_address:
+    resource : App\Controller\UserAddressController
+    prefix : /api
