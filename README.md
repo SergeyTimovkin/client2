@@ -7,7 +7,7 @@
 Installation:
 ============
 ```bash
-$ git clone https://github.com/SergeyTimovkin/client.git
+$ git clone https://github.com/SergeyTimovkin/client2.git
 $ composer install
 ```
 
