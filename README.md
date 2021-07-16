@@ -50,7 +50,6 @@ curl --request POST \
   --url http://127.0.0.1:8000/authentication_token \
   --header 'Content-Type: application/json' \
   --header 'Cookie: PHPSESSID=l899f8ivr2dpgc1mibb6jlbtqhof551u' \
-  --cookie PHPSESSID=c8sfj28fhap92qv5sdksd73tmlg9k9rh \
   --data '{
 	"email":"root@root.com",
 	"password":"root"
@@ -72,7 +71,6 @@ curl --request POST \
 curl --request GET \
   --url http://127.0.0.1:8000/api/user/address/ \
   --header 'token: *' \
-  --cookie PHPSESSID=p9bt7uuath634amlfkj7iaiegqgqrrhu
 ```
 * Удаление адреса пользователя
 ```bash
@@ -80,7 +78,6 @@ curl --request DELETE \
   --url http://127.0.0.1:8000/api/user/address/3 \
   --header 'Content-Type: multipart/form-data; boundary=---011000010111000001101001' \
   --header 'token: *' \
-  --cookie PHPSESSID=1sfdrvfd0ol55q3t45pu73cr7j4n3ktg
 ```
 * Добавление пользователю адреса
 ```bash
@@ -88,7 +85,6 @@ curl --request POST \
   --url http://127.0.0.1:8000/api/user/address/ \
   --header 'Content-Type: multipart/form-data; boundary=---011000010111000001101001' \
   --header 'token: *' \
-  --cookie PHPSESSID=1sfdrvfd0ol55q3t45pu73cr7j4n3ktg \
   --form homeId=2 \
   --form porch=4
 ```
@@ -98,7 +94,6 @@ curl --request PUT \
   --url 'http://127.0.0.1:8000/api/user/address/5?homeId=2&porch=777' \
   --header 'Content-Type: multipart/form-data; boundary=---011000010111000001101001' \
   --header 'token: *' \
-  --cookie PHPSESSID=1sfdrvfd0ol55q3t45pu73cr7j4n3ktg
 ```
 ##### Схема БД:
  **схема_бд.mwb**
