@@ -1,5 +1,6 @@
 # REST: Symfony5 + Api platform
-
+*Бизнес-суть проекта: пользователь и его адреса. 
+* Проект расширяемый. Можно использовать как основу. 
 ### Requirements
   * PHP 7.4 or higher;
   * MySQL-5.7 or higher;
