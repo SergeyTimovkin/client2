@@ -64,7 +64,7 @@ class InsertDumpDBCommand extends Command
                      
                      INSERT INTO `user_address` (`id`, `user_id`, `home_id`, `porch`, `floor`, `intercom`, `apartment`) VALUES
                      (1, 1, 1, 1, 1, 1, NULL),
-                     (1, 1, 2, 1, 2, NULL, 4);'
+                     (2, 1, 2, 1, 2, NULL, 4);'
                 )
                 ->execute();
             $resultMsg = 'Дамп успешно загружен.';
