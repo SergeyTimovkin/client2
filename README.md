@@ -23,6 +23,7 @@ $ php bin/console app:insert-dump
 ```
 
 ##### Generate the SSH keys:
+* Создайте дирректорию jwt в папке config
 ```bash
 $ openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
 > 12345
@@ -64,10 +65,6 @@ curl --request POST \
 ```bash
  cd vendor/bin
  phpstan.bat analyse -c ..\..\phpstan.neon
-```
-##### Запуск тестов
-```bash
- php bin/phpunit
 ```
 # Примеры запросов
 * Получение всех адресов пользователя
