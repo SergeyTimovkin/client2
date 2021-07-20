@@ -18,6 +18,7 @@
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.3",
+        "estahn/phpunit-json-assertions": "^4.0",
         "phpstan/phpstan": "^0.12.92",
         "phpunit/phpunit": "8.5",
         "symfony/maker-bundle": "^1.14",
