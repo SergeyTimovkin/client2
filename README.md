@@ -66,6 +66,12 @@ curl --request POST \
  cd vendor/bin
  phpstan.bat analyse -c ..\..\phpstan.neon
 ```
+##### Проверка phpunit
+```bash
+ cd vendor/bin
+ phpunit ..\..\tests
+```
+
 # Примеры запросов
 * Получение всех адресов пользователя
 ```bash
