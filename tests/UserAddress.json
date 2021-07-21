@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "addresses": {
+      "type": "array",
+      "items": [
+        {
+          "type": "array",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "region": {
+              "type": "array",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "city": {
+              "type": "array",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "street": {
+              "type": "array",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "home": {
+              "type": "array",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "number": {
+                  "type": "integer"
+                },
+                "lat": {
+                  "type": "null"
+                },
+                "lon": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "id",
+                "number",
+                "lat",
+                "lon"
+              ]
+            },
+            "porch": {
+              "type": "integer"
+            },
+            "floor": {
+              "type": "integer"
+            },
+            "intercom": {
+              "type": "integer"
+            },
+            "apartment": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "region",
+            "city",
+            "street",
+            "home",
+            "porch",
+            "floor",
+            "intercom",
+            "apartment"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "email",
+    "addresses"
+  ]
+}

@@ -67,6 +67,7 @@ curl --request POST \
  phpstan.bat analyse -c ..\..\phpstan.neon
 ```
 ##### Проверка phpunit
+Дополнительно необходимо указать токен(TOKEN) тестового пользователя и тестируемый хост(host) в tests/BaseTest
 ```bash
  cd vendor/bin
  phpunit ..\..\tests
@@ -77,14 +78,14 @@ curl --request POST \
 ```bash
 curl --request GET \
   --url http://127.0.0.1:8000/api/user/address/ \
-  --header 'token: *' \
+  --header 'token: *'
 ```
 * Удаление адреса пользователя
 ```bash
 curl --request DELETE \
   --url http://127.0.0.1:8000/api/user/address/3 \
   --header 'Content-Type: multipart/form-data; boundary=---011000010111000001101001' \
-  --header 'token: *' \
+  --header 'token: *'
 ```
 * Добавление пользователю адреса
 ```bash
@@ -100,7 +101,7 @@ curl --request POST \
 curl --request PUT \
   --url 'http://127.0.0.1:8000/api/user/address/5?homeId=2&porch=777' \
   --header 'Content-Type: multipart/form-data; boundary=---011000010111000001101001' \
-  --header 'token: *' \
+  --header 'token: *'
 ```
 ##### Схема БД:
  **схема_бд.mwb**
