@@ -107,4 +107,3 @@ curl --request PUT \
  **схема_бд.mwb**
 # todo:
 * доку open api
-* юнит тесты
