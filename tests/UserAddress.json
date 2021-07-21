@@ -72,10 +72,16 @@
                   "type": "integer"
                 },
                 "lat": {
-                  "type": "null"
+                  "type": [
+                    "null",
+                    "number"
+                  ]
                 },
                 "lon": {
-                  "type": "null"
+                  "type": [
+                    "null",
+                    "number"
+                  ]
                 }
               },
               "required": [
@@ -86,16 +92,28 @@
               ]
             },
             "porch": {
-              "type": "integer"
+              "type": [
+                "integer",
+                "null"
+              ]
             },
             "floor": {
-              "type": "integer"
+              "type": [
+                "integer",
+                "null"
+              ]
             },
             "intercom": {
-              "type": "integer"
+              "type": [
+                "integer",
+                "null"
+              ]
             },
             "apartment": {
-              "type": "null"
+              "type": [
+                "integer",
+                "null"
+              ]
             }
           },
           "required": [
