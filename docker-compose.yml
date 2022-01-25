@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./compose/nginx/Dockerfile
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./source:/var/www/html:delegated
+    depends_on:
+      - php
+      - mysql
+
+  mysql:
+    image: mysql:5.7.29
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME} 
+      MYSQL_PASSWORD: ${DB_PASSWORD} 
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./compose/mysql/my.cnf:/etc/mysql/my.cnf
+      - ./dbdata:/var/lib/mysql/
+
+#  redis:
+#    image: redis:5-alpine
+#    container_name: redis
+#    restart: unless-stopped
+#    ports:
+#      - "6379:6379"
+
+#  rabbit:
+#    image: rabbitmq:3-management
+#    ports:
+#      - "15672:15672"
+#      - "5672:5672"
+#    volumes:
+#      - ./compose/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.config
+
+  php:
+    build:
+      context: .
+      dockerfile: ./compose/php/Dockerfile
+    container_name: php
+    volumes:
+      - ./source:/var/www/html:delegated
+    ports:
+      - "9000:9000"
+
+
